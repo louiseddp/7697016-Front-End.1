@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title>Les Bonnes Pièces</title>
-		<link rel="stylesheet" href="styles.css">
-		<script type="module" src="pieces.js"></script>
-	</head>
-	<body>
-		<header>
-			<img src="images/logo-les-bonnes-pieces.png" alt="LOGO">
-			<h1>Les Bonnes Pièces</h1>
-		</header>
-		<main>
-			<!-- Menu de recherche -->
-			<section class="filtres">
-				<h3>Filtres</h3>
-				<button class="btn-trier">Trier par prix croissant</button>
-				<br>
-				<button class="btn-filtrer">Filtrer les pièces non abordables</button>
-				<button class="btn-description">Afficher seulement les pièces avec une description</button>
-				<button class="btn-decroissant">Trier par prix décroissant</button>
-			</section>
 
-			<section class="abordables">
-				<h3>Produits abordables</h3>
-			</section>
-			<section class="dispos">
-				<h3>Produits disponibles</h3>
-			</section>
+<head>
+	<meta charset="utf-8">
+	<title>Les Bonnes Pièces</title>
+	<link rel="stylesheet" href="styles.css">
+	<script type="module" src="pieces.js"></script>
+</head>
 
-			<div>
-				<input type="range" id="prixmax" name="prixmax" 
-					   min="0" max="60" value="60" step="5">
-				<p>Prix Maximum</p>
-			</div>
+<body>
+	<header>
+		<img src="images/logo-les-bonnes-pieces.png" alt="LOGO">
+		<h1>Les Bonnes Pièces</h1>
+	</header>
+	<main>
+		<!-- Menu de recherche -->
+		<section class="filtres">
+			<h3>Filtres</h3>
+			<button class="btn-trier">Trier par prix croissant</button>
+			<br>
+			<button class="btn-filtrer">Filtrer les pièces non abordables</button>
+			<button class="btn-description">Afficher seulement les pièces avec une description</button>
+			<button class="btn-decroissant">Trier par prix décroissant</button>
+		</section>
 
-			<!-- Fiches produits -->
-			<section class="fiches">
-			</section>
-		</main>
-	</body>
+		<section class="abordables">
+			<h3>Produits abordables</h3>
+		</section>
+		<section class="dispos">
+			<h3>Produits disponibles</h3>
+		</section>
+
+		<div>
+			<input type="range" id="prixmax" name="prixmax" min="0" max="60" value="60" step="5">
+			<p>Prix Maximum</p>
+		</div>
+		<h3>Ajouter un avis</h3>
+		<form class="formulaire-avis">
+				Identifiant de la pièce :<br>
+				<input type="number" name="piece-id"><br>
+				Nom d'utilisateur :<br>
+				<input type="text" name="utilisateur"><br>
+				Avis :<br>
+				<input type="text" name="commentaire"><br>
+				Nombre d'étoiles :<br>
+				<input type="number" name="nbetoiles"><br>
+				<button>Envoyer</button>
+		</form>
+		<h3>Données</h3>
+		<button class="btn-maj">Mettre à jour les pièces</button>
+
+		<!-- Fiches produits -->
+		<section class="fiches">
+		</section>
+	</main>
+</body>
+
 </html>
